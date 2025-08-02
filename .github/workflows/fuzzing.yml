@@ -37,7 +37,7 @@ jobs:
 
       - name: Run fuzzing
         run: |
-          $HOME/go/bin/ffuf 
+          $HOME/go/bin/ffuf -w ./SQL-Injection -u http://localhost:3000/rest/user/login
 
       - name: Get Logs from Service
         run: |
